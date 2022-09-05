@@ -1,0 +1,112 @@
+
+
+:root{
+    --paragraph-color : hsl(228, 12%, 48%);
+    --bg-color : hsl(30, 38%, 92%);
+    --container-color : hsl(0, 0%, 100%);
+    --big-price-color : hsl(158, 36%, 37%);
+    --bg-hover : hsl(157, 31%, 24%);
+    --heading-color : hsl(212, 21%, 14%);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 14px;
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 100%;
+}
+
+.containers{
+    min-width: 600px;
+    display: flex;
+    width: 30%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 12px;
+}
+
+.left-container{
+    width: 50%;
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px 0 0 12px;
+}
+.right-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 35px;
+}
+
+p{
+    color: var(--paragraph-color);
+
+}
+.preview{
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 4px;
+    font-weight: 500;
+
+}
+
+h1{
+    color: var(--heading-color);
+    font-size: 38px;
+}
+
+.description{
+    word-spacing: 2px;
+    line-height: 1.5;
+    width: 85%;
+}
+
+.price{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.main-price{
+    color: var(--big-price-color);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.cancelled-price{
+    text-decoration: line-through;
+}
+
+
+button{
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--big-price-color);
+    color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+button:hover{
+    background-color: var( --bg-hover) ;
+}

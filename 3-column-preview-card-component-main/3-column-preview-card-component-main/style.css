@@ -1,0 +1,113 @@
+/* 
+Bright orange: 
+Dark cyan: 
+Very dark cyan: 
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%) */
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+
+
+
+:root{
+    --bright-orange : hsl(31, 77%, 52%);
+    --dark-cyan :  hsl(184, 100%, 22%);
+    --very-dark-cyan :hsl(179, 100%, 13%);
+    --paragraphs : hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray : hsl(0, 0%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-light-gray);
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+main{
+    width: 100%;
+}
+
+p{
+    color: var(--paragraphs);
+    line-height: 1.7;
+    font-size: 13px;
+    width: 88%;
+}
+
+h1{
+    color: var(--Very-light-gray);
+    padding: 18px 0;
+    font-weight: 400;
+}
+button{
+    font-family: inherit;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+img{
+    width: 50px;
+}
+.container{
+    min-width: 800px;
+    width: 50%;
+    margin: 0 auto;
+    display: flex; 
+    
+}
+.card{
+    width: 33.33%;
+    padding: 38px;
+   
+}
+.card-orange{
+    background-color: var(--bright-orange);
+    border-radius: 10px 0 0 10px;
+}
+.card-cyan{
+    background-color: var(--dark-cyan);
+}
+.card-very_dark_cyan{
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+.card-orange button{
+    color: var(--bright-orange)
+}
+.card-cyan button{
+    color: var(--dark-cyan);
+}
+
+.card-very_dark_cyan button{
+    color: var(--very-dark-cyan);
+}
+
+/* @media screen and (min-width : 375px) and (max-width: 540px){
+
+    .container{
+        flex-direction: column;
+        margin: 50px auto;
+    }
+    
+} */
+
+
+

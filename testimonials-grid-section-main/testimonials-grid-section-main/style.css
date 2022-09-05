@@ -1,0 +1,90 @@
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Light-grayish-blue);
+}
+
+main{
+    width: 100%;
+}
+.cards{
+    width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    /* color: var(--White); */
+    position: relative;
+}
+.card{
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+.card-purple{
+    grid-column: 1/3;
+    background-color: var(--Moderate-violet);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    /* position: absolute;
+    left: 50px;
+    top: 0; */
+
+}
+
+/*This can be remove, but for readability*/
+.card-grey{
+    grid-column: 3/4;
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.card-black{
+    grid-column: 2/4;
+    grid-row: 2/3;
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+/*This can be remove, but for readability*/
+.card-white__row{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: var(--White);
+}
+.card-white__column{
+    grid-row: 1/3;
+    grid-column: 4/5;
+    background-color: var(--White);
+}
+.profile{
+    display: flex;
+}
+.profile img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 2px solid hsla(0, 0%, 100%, 0.5);
+    margin-right: 15px;
+}
+
+/* .profile-details{
+
+} */
