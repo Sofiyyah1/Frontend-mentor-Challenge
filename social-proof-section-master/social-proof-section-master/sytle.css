@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+
+:root{
+    --Very-dark-magenta: hsl(300, 43%, 22%);
+    --Soft-pink: hsl(333, 80%, 67%);
+    --Dark-grayish-magenta: hsl(303, 10%, 53%);
+    --Light-grayish-magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--White);
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'League Spartan', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: 
+    url(images/bg-pattern-top-desktop.svg),
+    url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left , bottom right;
+
+}
+.container{
+    width: 1000px;
+    display: grid;
+    grid-template-rows: repeat(2 , 1fr);
+    row-gap: 60px;
+}
+.top-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top__left-container{
+    width: 35%;
+}
+.top__left-container h1{
+    color: var(--Very-dark-magenta);
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+
+}
+.top__left-container p{
+    color: var(--Dark-grayish-magenta);
+    line-height: 1.4;
+}
+.top__right-container{
+    display: grid;
+    row-gap: 15px;
+    width: 470px;
+    height: 180px;
+}
+
+.review{
+    display: flex;
+    align-items: center;
+    background-color: var(--Light-grayish-magenta);
+    border-radius: 7px;
+    padding: 10px 30px 10px 20px;
+    width: 370px;   
+}
+.review:nth-of-type(2){
+    justify-self: center;
+}
+.review:nth-of-type(3){
+    justify-self: end;
+}
+.review p{
+    color: var(--Very-dark-magenta);
+    font-weight: 700;
+    margin-left: 25px;
+    font-size: 14px;
+}
+.review-rate img{
+    margin-right: 5px;
+    height: 13px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+    height: 240px;
+    
+}
+.card{
+    background-color: var(--Very-dark-magenta);
+    padding: 30px;
+    color: var(--Light-grayish-magenta);
+    border-radius: 10px;
+    line-height: 1.4;
+    font-size: 14px;
+}
+.card:nth-of-type(1){
+    align-self: start;
+}
+.card:nth-of-type(2){
+    align-self: center;
+}
+.card:nth-of-type(3){
+    align-self: end;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.profile-description{
+    display: block;
+    color: var(--Soft-pink);
+}
+.profile img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
