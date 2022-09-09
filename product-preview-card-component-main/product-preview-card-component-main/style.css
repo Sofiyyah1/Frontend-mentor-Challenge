@@ -1,155 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root{
+    --paragraph-color : hsl(228, 12%, 48%);
+    --bg-color : hsl(30, 38%, 92%);
+    --container-color : hsl(0, 0%, 100%);
+    --big-price-color : hsl(158, 36%, 37%);
+    --bg-hover : hsl(157, 31%, 24%);
+    --heading-color : hsl(212, 21%, 14%);
+}
+
 
 *{
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body{
     font-size: 14px;
-    background-color: hsl(30, 38%, 92%);
+    background-color: var(--bg-color);
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;  
 }
 
 main{
     width: 100%;
 }
 
-
 .containers{
-    min-width: 600px;
-    width: 30%;
+    min-width: 550px;
     display: flex;
-    background-color:hsl(0, 0%, 100%) ;
-    border-radius: 10px;
+    width: 30%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 12px;
 }
+
 .left-container{
     width: 50%;
     background-image: url(images/image-product-desktop.jpg);
-    background-position: center;
     background-size: cover;
-    border-radius: 10px 0 0 10px;
+    background-position: center;
+    border-radius: 12px 0 0 12px;
 }
 .right-container{
     width: 50%;
     display: flex;
     flex-direction: column;
-    row-gap: 24px;
+    row-gap: 15px;
     padding: 35px;
 }
 
 p{
-   color:hsl(228, 12%, 48%) ;
+    color: var(--paragraph-color);
+    font-size: 12px;
 }
 .preview{
-    font-size: 16px;
-    letter-spacing: 4px;
     text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 5px;
     font-weight: 500;
+
 }
+
 h1{
-    font-size: 38px;
-    color: hsl(212, 21%, 14%);
+    color: var(--heading-color);
+    font-size: 31px;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
 }
 
 .description{
-    width: 85%;
-    line-height: 1.5;
     word-spacing: 2px;
-    
+    line-height: 1.8;
+    margin: 8px 0;
 }
 
 .price{
     width: 100%;
     display: flex;
-    gap: 24px;
     align-items: center;
+    gap: 20px;
 }
-
 .main-price{
-    font-size: 36px;
-    color: hsl(158, 36%, 37%);
+    color: var(--big-price-color);
+    font-size: 28px;
     font-weight: 700;
+    font-family: 'Fraunces', serif;
 }
 
 .cancelled-price{
     text-decoration: line-through;
+    font-size: 15px;
 }
+
+
 button{
     width: 100%;
-    padding: 17px 0;
-    border-radius: 7px;
+    padding: 15px 0;
     border: none;
-    /* margin: 0 auto; */
+    border-radius: 7px;
+    background-color: var(--big-price-color);
+    color: var(--container-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(158, 36%, 37%);
-    gap: 10px;
+    gap: 8px;
     font-weight: 700;
-    word-spacing: 2px;
     cursor: pointer;
 }
-
 button:hover{
-    background-color: hsl(157.1, 36%, 25%);
+    background-color: var( --bg-hover) ;
 }
 
-
-
-
-
-@media screen and (min-width:641px) and (max-width:768px){
-
+@media (max-width: 600px){
     .containers{
-        max-width: 600px;
+        min-width: 375px;
+        flex-direction: column;
+        margin: 20px;
+
     }
-    
-}
-@media screen  and (max-width: 640px){
-   
-   .containers{
-    min-width: auto;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-   }
-
-   .left-container{
-    width: 100%;
-    height: 350px;
-    border-radius: 10px 10px 0 0;
-    background-image: url(images/image-product-mobile.jpg);
-    
-   }
-   .right-container{
-    width: 100%;
-    row-gap: 12px;
-    padding: 25px;
-    border-radius: 0 0 10px 10px;
-    
-   }
-
-   h1{
-    font-size: 32px;
-    line-height: 1;
-   }
-   .description{
-    width: 95%;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    line-height: 1.7;
-    /* font-size: 12px; */
-
-   }
-   button{
-    margin:10px;
-   }
-    
+    .left-container{
+        width: 100%;
+        height: 280px;
+        background-image: url(images/image-product-mobile.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 12px 12px 0 0 ;
+    }
+    .right-container{
+        width: 100%;
+    }
+    .description{
+        font-size: 0.9rem;
+        margin: 0;
+    }
+    .main-price{  
+        font-size: 32px;
+    }
 }
