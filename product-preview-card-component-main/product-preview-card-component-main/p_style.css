@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
 
 :root{
     --paragraph-color : hsl(228, 12%, 48%);
@@ -24,6 +24,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Montserrat', sans-serif;  
 }
 
 main{
@@ -31,7 +32,7 @@ main{
 }
 
 .containers{
-    min-width: 600px;
+    min-width: 550px;
     display: flex;
     width: 30%;
     background-color: hsl(0, 0%, 100%);
@@ -49,47 +50,51 @@ main{
     width: 50%;
     display: flex;
     flex-direction: column;
-    row-gap: 24px;
+    row-gap: 15px;
     padding: 35px;
 }
 
 p{
     color: var(--paragraph-color);
-
+    font-size: 12px;
 }
 .preview{
     text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 4px;
+    font-size: 11px;
+    letter-spacing: 5px;
     font-weight: 500;
 
 }
 
 h1{
     color: var(--heading-color);
-    font-size: 38px;
+    font-size: 31px;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
 }
 
 .description{
     word-spacing: 2px;
-    line-height: 1.5;
-    width: 85%;
+    line-height: 1.8;
+    margin: 8px 0;
 }
 
 .price{
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 .main-price{
     color: var(--big-price-color);
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
+    font-family: 'Fraunces', serif;
 }
 
 .cancelled-price{
     text-decoration: line-through;
+    font-size: 15px;
 }
 
 
@@ -99,7 +104,7 @@ button{
     border: none;
     border-radius: 7px;
     background-color: var(--big-price-color);
-    color: var(--bg-color);
+    color: var(--container-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,4 +114,30 @@ button{
 }
 button:hover{
     background-color: var( --bg-hover) ;
+}
+
+@media (max-width: 600px){
+    .containers{
+        min-width: 375px;
+        flex-direction: column;
+
+    }
+    .left-container{
+        width: 100%;
+        height: 280px;
+        background-image: url(images/image-product-mobile.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 12px 12px 0 0 ;
+    }
+    .right-container{
+        width: 100%;
+    }
+    .description{
+        font-size: 0.9rem;
+        margin: 0;
+    }
+    .main-price{  
+        font-size: 32px;
+    }
 }

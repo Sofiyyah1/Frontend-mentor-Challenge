@@ -1,0 +1,1 @@
+# Challenge on product-preview-card-component
